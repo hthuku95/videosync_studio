@@ -25,11 +25,11 @@ const services: Service[] = [
     price: '$100 – $200',
     buyer: 'SaaS founders, business owners, consultants, marketers',
     promise:
-      'Send us your website URL. We crawl it, learn your business, and deliver 10 to 30 AI-animated videos (how-to, marketing, product demos, explainers, testimonials) — fully produced and delivered to you. No work on your end.',
+      'Send us your website URL. We crawl it, learn your business, and deliver 10 to 30 animated videos (how-to, marketing, product demos, explainers, testimonials, brand stories) — fully produced and delivered to you. No work on your end.',
     deliverables: [
       '10 to 30 animated videos from your website',
       'Any video type: how-to, marketing, product demo, explainer, testimonial',
-      'AI-generated from your site content',
+      'Generated from your site content (no templates)',
       'Downloadable delivery page with all videos',
       '15-min strategy call included',
     ],
@@ -42,7 +42,7 @@ const services: Service[] = [
     price: '$100 – $200',
     buyer: 'Educators, course creators, edu-YouTubers, training teams',
     promise:
-      'Describe your lesson topic. We produce 10 to 30 AI-animated educational videos (math, science, coding, language, history, and more) with equations, diagrams, motion graphics, and narration — fully produced and delivered to you.',
+      'Describe your lesson topic. We produce 10 to 30 animated educational videos (math, science, coding, language, history, finance, and more) with equations, diagrams, code animations, data charts, motion graphics, VFX, 3D depth, and narration — fully produced and delivered to you.',
     deliverables: [
       '10 to 30 animated lesson videos',
       'Any subject: math, science, coding, language, history, finance',
@@ -99,11 +99,11 @@ function App() {
 
       <section className="hero">
         <div className="hero-copy">
-          <div className="eyebrow">Done-for-you AI video production</div>
+          <div className="eyebrow">Done-for-you video production</div>
           <h1>We produce the videos. You deliver them to your audience.</h1>
           <p>
             VideoSync Studio is the done-for-you arm of VideoSync. Send us your website URL or lesson topic —
-            we crawl, learn, and produce 10 to 30 AI-animated videos tailored to your brand. No software to learn,
+            we crawl, learn, and produce 10 to 30 animated videos tailored to your brand. No software to learn,
             no rendering to manage. Book a 15-minute call to get started.
           </p>
           <div className="hero-actions">
@@ -127,7 +127,7 @@ function App() {
       </section>
 
       <section className="pricing-note">
-        <strong>Done-for-you pricing.</strong> You pay $100–$200 for 10–30 fully produced animated videos.
+        <strong>Done-for-you pricing.</strong> You pay $100–$200 for 10–30 fully produced animated videos. Every type of animation: equations, diagrams, code animations, data charts, motion graphics, VFX, 3D depth, kinetic typography, and more.
         We handle everything — you get a delivery link with all videos ready to download and use.
         Market alternatives range from $500+ per video at traditional studios. We sit in the practical middle:
         fast, affordable, and premium enough to resell.
