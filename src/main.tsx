@@ -138,7 +138,6 @@ function App() {
               VideoSync&nbsp;Studio
             </Typography>
             <Button color="inherit" href="#services" sx={{ display: { xs: 'none', sm: 'inline-flex' } }}>Services</Button>
-            <Button color="inherit" href={`${API_BASE}/chat`}>Workspace</Button>
             <Button variant="contained" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
               Book a call
             </Button>
@@ -262,8 +261,8 @@ function App() {
             VideoSync Studio — AI-agent video production. Produce more content for less. No studio, no crew, no waiting.
           </Typography>
           <Typography variant="body2" sx={{ mt: 1 }}>
-            <a href="/terms" style={{ color: '#64748b', textDecoration: 'none' }}>Terms</a> ·{' '}
-            <a href="/privacy" style={{ color: '#64748b', textDecoration: 'none' }}>Privacy</a>
+            <a href={`${API_BASE}/terms`} style={{ color: '#64748b', textDecoration: 'none' }}>Terms</a> ·{' '}
+            <a href={`${API_BASE}/privacy`} style={{ color: '#64748b', textDecoration: 'none' }}>Privacy</a>
           </Typography>
         </Box>
       </Box>
