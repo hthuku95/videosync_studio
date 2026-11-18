@@ -11,9 +11,10 @@ import PhoneIcon from '@mui/icons-material/SupportAgent';
 import ShieldIcon from '@mui/icons-material/VerifiedUser';
 import BoltIcon from '@mui/icons-material/Bolt';
 import { studioTheme } from './theme';
+import { ShowcaseStrip } from './showcase';
 import './styles.css';
 
-const API_BASE = import.meta.env.VITE_VIDEOSYNC_API_BASE || 'https://www.videosync.ink';
+import { API_BASE } from './config';
 const CALENDLY_URL = import.meta.env.VITE_CALENDLY_URL || 'https://calendly.com/videosync-support/30min';
 const FREELANCE_LANDING_URL = import.meta.env.VITE_FREELANCE_LANDING_URL || 'https://www.peopleperhour.com/hourlie/create-10-professional-animation-videos-from-your-website-url/1138115/auto?ref=member';
 const FREELANCE_EDUCATION_URL = import.meta.env.VITE_FREELANCE_EDUCATION_URL || 'https://www.peopleperhour.com/hourlie/create-10-educational-animation-videos-on-any-topic/1138113?ref=similar-hourlie';
@@ -196,6 +197,11 @@ function App() {
               </Paper>
             </Grid>
           </Grid>
+        </Container>
+
+        {/* RECENT WORK — real generated clips (proof of outcome) */}
+        <Container maxWidth="lg">
+          <ShowcaseStrip />
         </Container>
 
         {/* SERVICES */}
