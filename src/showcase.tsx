@@ -81,9 +81,12 @@ function SceneClip({ src, portrait }: { src: string; portrait: boolean }) {
         border: '1px solid',
         borderColor: 'divider',
         aspectRatio: portrait ? '9 / 14' : '16 / 9',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        position: 'relative',
+        transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+        '&:hover': {
+          transform: 'translateY(-4px)',
+          boxShadow: '0 12px 32px rgba(0,0,0,0.35)',
+        },
       }}
     >
       <video
@@ -103,6 +106,28 @@ function SceneClip({ src, portrait }: { src: string; portrait: boolean }) {
           transition: 'opacity 0.7s ease',
         }}
       />
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: 44,
+          height: 44,
+          borderRadius: '50%',
+          bgcolor: 'rgba(11,11,20,0.55)',
+          backdropFilter: 'blur(4px)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          pointerEvents: 'none',
+          opacity: 0.85,
+        }}
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </Box>
     </Box>
   );
 }
