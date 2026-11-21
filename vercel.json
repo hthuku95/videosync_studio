@@ -1,4 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "headers": [
     {
       "source": "/(.*)",
@@ -8,5 +9,12 @@
         { "key": "Vercel-CDN-Cache-Control", "value": "no-store" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/delivery/:id", "destination": "https://videosync.ink/delivery/:id" },
+    { "source": "/delivery/:id/stream", "destination": "https://videosync.ink/delivery/:id/stream" },
+    { "source": "/delivery/:id/clip/:idx", "destination": "https://videosync.ink/delivery/:id/clip/:idx" },
+    { "source": "/delivery/:id/feedback", "destination": "https://videosync.ink/delivery/:id/feedback" },
+    { "source": "/delivery/:path*", "destination": "https://videosync.ink/delivery/:path*" }
   ]
 }
