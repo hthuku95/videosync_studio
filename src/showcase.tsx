@@ -162,7 +162,7 @@ export function ShowcaseStrip() {
   return (
     <Box sx={{ py: 6 }}>
       <Typography variant="h2" component="h2" sx={{ mb: 1 }}>
-        Recent work
+        Recent Work
       </Typography>
       <Typography variant="body1" color="text.secondary" sx={{ mb: 4, maxWidth: 640 }}>
         A sample of videos produced. end-to-end by our pipeline — brief, script, voiceover, animation, render.
