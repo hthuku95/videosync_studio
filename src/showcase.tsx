@@ -80,6 +80,10 @@ function SceneClip({ src, portrait }: { src: string; portrait: boolean }) {
         bgcolor: 'rgba(255,255,255,0.04)',
         border: '1px solid',
         borderColor: 'divider',
+        aspectRatio: portrait ? '9 / 14' : '16 / 9',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       <video
@@ -93,7 +97,7 @@ function SceneClip({ src, portrait }: { src: string; portrait: boolean }) {
         style={{
           display: 'block',
           width: '100%',
-          aspectRatio: portrait ? '9 / 14' : '16 / 9',
+          height: '100%',
           objectFit: 'cover',
           opacity: ready ? 1 : 0,
           transition: 'opacity 0.7s ease',
@@ -111,7 +115,13 @@ export function ShowcaseStrip() {
     let alive = true;
     getShowcase().then((d) => {
       if (!alive) return;
-      const mixed = [...d.scenes].sort((a, b) => {
+      const seen = new Set<string>();
+      const unique = d.scenes.filter((s) => {
+        if (!s?.url || seen.has(s.url)) return false;
+        seen.add(s.url);
+        return true;
+      });
+      const mixed = [...unique].sort((a, b) => {
         if (a.orientation !== b.orientation) return a.orientation === 'portrait' ? -1 : 1;
         return a.source.localeCompare(b.source);
       });
