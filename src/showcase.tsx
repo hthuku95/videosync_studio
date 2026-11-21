@@ -165,7 +165,7 @@ export function ShowcaseStrip() {
         Recent work
       </Typography>
       <Typography variant="body1" color="text.secondary" sx={{ mb: 4, maxWidth: 640 }}>
-        A sample of videos produced end-to-end by our pipeline — brief, script, voiceover, animation, render.
+        A sample of videos produced. end-to-end by our pipeline — brief, script, voiceover, animation, render.
       </Typography>
       <Box
         sx={{
